@@ -174,11 +174,11 @@ in
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "microsoft-edge";
-  version = "136.0.3240.76";
+  version = "135.0.3179.85";
 
   src = fetchurl {
     url = "https://packages.microsoft.com/repos/edge/pool/main/m/microsoft-edge-stable/microsoft-edge-stable_${finalAttrs.version}-1_amd64.deb";
-    hash = "sha256-biNM1exJ/xUcmhZjH7ZcFF9cYVqsPavbbtsJnRVlyFo=";
+    hash = "sha256-x1YpKsvj2Jx1/VE13eE/aCkv+b7rGOQo4xcRYu2GQGA=";
   };
 
   # With strictDeps on, some shebangs were not being patched correctly
@@ -212,15 +212,20 @@ stdenv.mkDerivation (finalAttrs: {
 
   installPhase = ''
     runHook preInstall
+
     appname=msedge
     dist=stable
+
     exe=$out/bin/microsoft-edge
+
     mkdir -p $out/bin $out/share
     cp -v -a opt/* $out/share
     cp -v -a usr/share/* $out/share
+
     # replace bundled vulkan-loader
     rm -v $out/share/microsoft/$appname/libvulkan.so.1
     ln -v -s -t "$out/share/microsoft/$appname" "${lib.getLib vulkan-loader}/lib/libvulkan.so.1"
+
     substituteInPlace $out/share/microsoft/$appname/microsoft-edge \
       --replace-fail 'CHROME_WRAPPER' 'WRAPPER'
     substituteInPlace $out/share/applications/microsoft-edge.desktop \
@@ -230,6 +235,7 @@ stdenv.mkDerivation (finalAttrs: {
     substituteInPlace $out/share/menu/microsoft-edge.menu \
       --replace-fail /opt $out/share \
       --replace-fail $out/share/microsoft/$appname/microsoft-edge $exe
+
     for icon_file in $out/share/microsoft/msedge/product_logo_[0-9]*.png; do
       num_and_suffix="''${icon_file##*logo_}"
       if [ $dist = "stable" ]; then
@@ -242,6 +248,7 @@ stdenv.mkDerivation (finalAttrs: {
       mkdir -p "$logo_output_path"
       mv "$icon_file" "$logo_output_path/microsoft-edge.png"
     done
+
     # "--simulate-outdated-no-au" disables auto updates and browser outdated popup
     makeWrapper "$out/share/microsoft/$appname/microsoft-edge" "$exe" \
       --prefix LD_LIBRARY_PATH : "$rpath" \
@@ -253,14 +260,18 @@ stdenv.mkDerivation (finalAttrs: {
       --add-flags "\''${NIXOS_OZONE_WL:+\''${WAYLAND_DISPLAY:+--ozone-platform-hint=auto --enable-features=WaylandWindowDecorations --enable-wayland-ime=true}}" \
       --add-flags "--simulate-outdated-no-au='Tue, 31 Dec 2099 23:59:59 GMT'" \
       --add-flags ${lib.escapeShellArg commandLineArgs}
+
     # Make sure that libGL and libvulkan are found by ANGLE libGLESv2.so
     patchelf --set-rpath $rpath $out/share/microsoft/$appname/lib*GL*
+
     # Edge specific set liboneauth
     patchelf --set-rpath $rpath $out/share/microsoft/$appname/liboneauth.so
+
     for elf in $out/share/microsoft/$appname/{msedge,msedge-sandbox,msedge_crashpad_handler}; do
       patchelf --set-rpath $rpath $elf
       patchelf --set-interpreter "$(cat $NIX_CC/nix-support/dynamic-linker)" $elf
     done
+
     runHook postInstall
   '';
 
@@ -273,6 +284,7 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.unfree;
     mainProgram = "microsoft-edge";
     maintainers = with lib.maintainers; [
+      zanculmarktum
       kuwii
       rhysmdnz
     ];
