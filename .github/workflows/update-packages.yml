@@ -1,0 +1,42 @@
+name: Update Packages
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 2 * * *' # 每天凌晨2点自动运行
+
+jobs:
+  update-packages:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: cachix/install-nix-action@v31
+        with:
+          github_access_token: ${{ secrets.GITHUB_TOKEN }}
+          
+      - name: Set up Git user
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Find and run all update.sh scripts
+        run: |
+          set -e
+          find packages -type f -name update.sh | while read script; do
+            echo "Running $script"
+            bash "$script"
+          done
+
+      - name: Commit and push changes
+        run: |
+          git add .
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "chore: update packages via GitHub Actions"
+            git push
+          fi
