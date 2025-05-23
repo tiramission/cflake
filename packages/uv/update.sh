@@ -19,9 +19,9 @@ cat > $(dirname $(realpath "${BASH_SOURCE[0]}"))/version.json <<EOF
         "hash": "$(hash_for 'aarch64-apple-darwin')",
         "url": "$(url_for 'aarch64-apple-darwin')"
     },
-    "x86_64-unknown-linux-gnu": {
-        "hash": "$(hash_for 'x86_64-unknown-linux-gnu')",
-        "url": "$(url_for 'x86_64-unknown-linux-gnu')"
+    "aarch64-unknown-linux-musl": {
+        "hash": "$(hash_for 'aarch64-unknown-linux-musl')",
+        "url": "$(url_for 'aarch64-unknown-linux-musl')"
     },
     "x86_64-unknown-linux-musl": {
         "hash": "$(hash_for 'x86_64-unknown-linux-musl')",
