@@ -14,7 +14,7 @@ in
     withSystems = supportedSystems: pkg:
       if builtins.elem system supportedSystems
       then pkg
-      else null;
+      else throw ("Current system " + system + " is not supported for this package. Supported: " + builtins.toString supportedSystems);
   in {
     sarasa-term-sc-nerd = pkgs.callPackage ./sarasa-term-sc-nerd.nix {};
     uv = pkgs.callPackage ./uv {};
