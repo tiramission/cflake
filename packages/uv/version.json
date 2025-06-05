@@ -1,15 +1,15 @@
 {
-    "version": "0.7.10",
+    "version": "0.7.11",
     "aarch64-apple-darwin": {
-        "hash": "sha256-MWuAwZgy/0CFdIw6IKPgXzbh0ZI06Lk5mm/RyXEkG84=",
-        "url": "https://gh-proxy.com/github.com/astral-sh/uv/releases/download/0.7.10/uv-aarch64-apple-darwin.tar.gz"
+        "hash": "sha256-tfTLJ6MALWWQw2gTd8bYJtsLUuKpUpxxRPzVP+yJunk=",
+        "url": "https://gh-proxy.com/github.com/astral-sh/uv/releases/download/0.7.11/uv-aarch64-apple-darwin.tar.gz"
     },
     "aarch64-unknown-linux-musl": {
-        "hash": "sha256-+QAPCIUKXFddX+HdwuySjsyfKH7NzZ+h6k4/QFsj1KM=",
-        "url": "https://gh-proxy.com/github.com/astral-sh/uv/releases/download/0.7.10/uv-aarch64-unknown-linux-musl.tar.gz"
+        "hash": "sha256-KtINFDx01/Y9HJnbOZnyOfBFt74EHiP2rIsmnJn6VP4=",
+        "url": "https://gh-proxy.com/github.com/astral-sh/uv/releases/download/0.7.11/uv-aarch64-unknown-linux-musl.tar.gz"
     },
     "x86_64-unknown-linux-musl": {
-        "hash": "sha256-ss8fY+g6hzZS/+8DJoG7vhRp47q2F/fnFeCVKcMPVok=",
-        "url": "https://gh-proxy.com/github.com/astral-sh/uv/releases/download/0.7.10/uv-x86_64-unknown-linux-musl.tar.gz"
+        "hash": "sha256-5OiUhkXr6hlQo8d1dM4Hnf4ccVR7paihQdbjYvoDZoQ=",
+        "url": "https://gh-proxy.com/github.com/astral-sh/uv/releases/download/0.7.11/uv-x86_64-unknown-linux-musl.tar.gz"
     }
 }
