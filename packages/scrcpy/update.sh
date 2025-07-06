@@ -7,7 +7,6 @@ function url_for() {
 }
 
 function hash_for() {
-    local url="https://gh-proxy.com/github.com/Genymobile/scrcpy/releases/download/v3.3.1/SHA256SUMS.txt"
     local url="https://gh-proxy.com/github.com/Genymobile/scrcpy/releases/download/${version}/SHA256SUMS.txt"
     local sha256=$(curl -sSL "${url}" | grep "${1}" | awk '{print $1}')
     nix hash convert --hash-algo sha256 --to sri ${sha256}
