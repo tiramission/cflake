@@ -18,7 +18,6 @@ in
   in {
     sarasa-term-sc-nerd = pkgs.callPackage ./sarasa-term-sc-nerd.nix {};
     uv = pkgs.callPackage ./uv {};
-    scrcpy = pkgs.callPackage ./scrcpy {};
-    # 仅 x86_64-linux 支持
+    scrcpy = withSystems ["x86_64-linux" "aarch64-darwin"] (pkgs.callPackage ./scrcpy {});
     microsoft-edge = withSystems ["x86_64-linux"] (pkgs.callPackage ./microsoft-edge {});
   })
