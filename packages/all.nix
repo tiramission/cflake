@@ -16,7 +16,7 @@ in
       then pkg
       else throw ("Current system " + system + " is not supported for this package. Supported: " + builtins.toString supportedSystems);
   in {
-    sarasa-term-sc-nerd = pkgs.callPackage ./sarasa-term-sc-nerd.nix {};
+    sarasa-term-sc-nerd = pkgs.callPackage ./sarasa-term-sc-nerd {};
     uv = pkgs.callPackage ./uv {};
     scrcpy = withSystems ["x86_64-linux" "aarch64-darwin"] (pkgs.callPackage ./scrcpy {});
     microsoft-edge = withSystems ["x86_64-linux"] (pkgs.callPackage ./microsoft-edge {});
