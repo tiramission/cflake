@@ -1,6 +1,8 @@
 #!usr/bin/env bash
 
-version=$(curl -sSL https://api.github.com/repos/astral-sh/uv/releases/latest | nix run nixpkgs#yq -- .name -r)
+set -e
+
+version=$(curl -fsSL https://api.github.com/repos/astral-sh/uv/releases/latest | nix run nixpkgs#yq -- .name -r)
 
 function url_for() {
     echo "https://gh-proxy.com/github.com/astral-sh/uv/releases/download/${version}/uv-${1}.tar.gz"
