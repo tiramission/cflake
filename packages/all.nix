@@ -20,7 +20,8 @@ in
   in {
     sarasa-term-sc-nerd = withLinuxs (pkgs.callPackage ./sarasa-term-sc-nerd {});
     uv = pkgs.callPackage ./uv {};
-    smctemp = withDarwin (pkgs.callPackage ./smctemp {});
+    smctemp = pkgs.callPackage ./smctemp {};
     scrcpy = withSystems ["x86_64-linux" "aarch64-darwin"] (pkgs.callPackage ./scrcpy {});
     microsoft-edge = withSystems ["x86_64-linux"] (pkgs.callPackage ./microsoft-edge {});
+    qq = pkgs.callPackage ./qq {};
   })
