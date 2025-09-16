@@ -12,11 +12,6 @@ in
   stdenv.mkDerivation rec {
     pname = "uv";
     version = versionData.version;
-    meta.platforms = [
-      "x86_64-linux"
-      "aarch64-linux"
-      "aarch64-darwin"
-    ];
 
     src = let
       toMapSystem = {
@@ -49,4 +44,10 @@ in
       $out/bin/uv generate-shell-completion zsh > $out/share/zsh/site-functions/_uv
       $out/bin/uv generate-shell-completion fish > $out/share/fish/vendor_completions.d/uv.fish
     '';
+
+    meta.platforms = [
+      "x86_64-linux"
+      "aarch64-linux"
+      "aarch64-darwin"
+    ];
   }

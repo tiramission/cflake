@@ -1,5 +1,7 @@
 #!usr/bin/env bash
 
+set -euo pipefail
+
 version=$(curl -sSL https://api.github.com/repos/Genymobile/scrcpy/releases/latest | nix run nixpkgs#yq -- .tag_name -r)
 
 function url_for() {

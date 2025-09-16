@@ -1,6 +1,6 @@
 #!usr/bin/env bash
 
-set -e
+set -euo pipefail
 
 version=$(curl -fsSL https://api.github.com/repos/astral-sh/uv/releases/latest | nix run nixpkgs#yq -- .name -r)
 
