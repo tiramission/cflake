@@ -15,8 +15,10 @@ in
     sarasa-term-sc-nerd = pkgs.callPackage ./manual/sarasa-term-sc-nerd.nix {};
     smctemp = pkgs.callPackage ./manual/smctemp.nix {};
     microsoft-edge = pkgs.callPackage ./manual/microsoft-edge.nix {};
+        wechat = pkgs.callPackage ./manual/wechat/package.nix {};
 
     uv = pkgs.callPackage ./auto-update/uv {};
     scrcpy = pkgs.callPackage ./auto-update/scrcpy {};
     qq = pkgs.callPackage ./auto-update/qq {};
+
   })
