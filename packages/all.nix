@@ -11,17 +11,11 @@ inputs: let
 in
   forAllSystems (system: let
     pkgs = nixpkgsFor.${system};
-    withSystems = supportedSystems: pkg:
-      if builtins.elem system supportedSystems
-      then pkg
-      else throw ("Current system " + system + " is not supported for this package. Supported: " + builtins.toString supportedSystems);
-    withLinuxs = withSystems ["x86_64-linux" "aarch64-linux"];
-    withDarwin = withSystems ["aarch64-darwin"];
   in {
-    sarasa-term-sc-nerd = withLinuxs (pkgs.callPackage ./sarasa-term-sc-nerd {});
-    uv = pkgs.callPackage ./uv {};
-    smctemp = pkgs.callPackage ./smctemp {};
-    scrcpy = withSystems ["x86_64-linux" "aarch64-darwin"] (pkgs.callPackage ./scrcpy {});
-    microsoft-edge = withSystems ["x86_64-linux"] (pkgs.callPackage ./microsoft-edge {});
-    qq = pkgs.callPackage ./qq {};
+    sarasa-term-sc-nerd = pkgs.callPackage ./manual/sarasa-term-sc-nerd.nix {};
+    uv = pkgs.callPackage ./auto-update/uv {};
+    smctemp = pkgs.callPackage ./manual/smctemp.nix {};
+    scrcpy = pkgs.callPackage ./auto-update/scrcpy {};
+    microsoft-edge = pkgs.callPackage ./manual/microsoft-edge.nix {};
+    qq = pkgs.callPackage ./auto-update/qq {};
   })
