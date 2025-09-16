@@ -31,4 +31,8 @@ in
       ${gnutar}/bin/tar -xzf $src --strip-components=1 -C $out/bin
       chmod +x $out/bin/adb $out/bin/scrcpy
     '';
+    meta.platforms = [
+      "x86_64-linux"
+      "aarch64-darwin"
+    ];
   }

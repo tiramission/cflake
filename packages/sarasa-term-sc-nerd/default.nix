@@ -7,7 +7,6 @@
 stdenv.mkDerivation rec {
   pname = "sarasa-term-sc-nerd";
   version = "2.3.1";
-
   src = fetchurl {
     url = "https://ghproxy.net/https://github.com/laishulu/Sarasa-Term-SC-Nerd/releases/download/v${version}/SarasaTermSCNerd.ttf.7z";
     sha256 = "sha256-REg7dJ7YJhEcFQ43+SIJkncJu1PsUCESlwHMfZftoKk=";
@@ -30,7 +29,7 @@ stdenv.mkDerivation rec {
     description = "简体中文终端更纱黑体+Nerd图标字体库";
     homepage = "https://github.com/laishulu/Sarasa-Term-SC-Nerd";
     license = licenses.ofl;
-    platforms = platforms.all;
+    platforms = platforms.linux;
     maintainers = with maintainers; [];
   };
 }
