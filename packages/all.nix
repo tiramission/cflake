@@ -13,9 +13,10 @@ in
     pkgs = nixpkgsFor.${system};
   in {
     sarasa-term-sc-nerd = pkgs.callPackage ./manual/sarasa-term-sc-nerd.nix {};
-    uv = pkgs.callPackage ./auto-update/uv {};
     smctemp = pkgs.callPackage ./manual/smctemp.nix {};
-    scrcpy = pkgs.callPackage ./auto-update/scrcpy {};
     microsoft-edge = pkgs.callPackage ./manual/microsoft-edge.nix {};
+
+    uv = pkgs.callPackage ./auto-update/uv {};
+    scrcpy = pkgs.callPackage ./auto-update/scrcpy {};
     qq = pkgs.callPackage ./auto-update/qq {};
   })
