@@ -1,11 +1,11 @@
 {
-    "version": "v3.3.2",
+    "version": "v3.3.3",
     "macos-aarch64": {
-        "hash": "sha256-ohPu/4rJWJPmnEvGoAGkAsZoDb/LdMs1PAEkGE7Yjo0=",
-        "url": "https://gh-proxy.com/github.com/Genymobile/scrcpy/releases/download/v3.3.2/scrcpy-macos-aarch64-v3.3.2.tar.gz"
+        "hash": "sha256-uTKZRo8ZromscPfBRTkUxB8fK80x9qtTADjaiFwZWB8=",
+        "url": "https://gh-proxy.com/github.com/Genymobile/scrcpy/releases/download/v3.3.3/scrcpy-macos-aarch64-v3.3.3.tar.gz"
     },
     "linux-x86_64": {
-        "hash": "sha256-kr7Q+idLkWXrh0DgfPLiaS6+Ca1pERdbDuQuCHmdxRw=",
-        "url": "https://gh-proxy.com/github.com/Genymobile/scrcpy/releases/download/v3.3.2/scrcpy-linux-x86_64-v3.3.2.tar.gz"
+        "hash": "sha256-mzDoE+gZEym6gCXcgMsPGY+woxiWCjtcFTlc9nXJxjg=",
+        "url": "https://gh-proxy.com/github.com/Genymobile/scrcpy/releases/download/v3.3.3/scrcpy-linux-x86_64-v3.3.3.tar.gz"
     }
 }
