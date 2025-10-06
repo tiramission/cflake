@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   config = {
     extraConfigLuaPre =
       # lua

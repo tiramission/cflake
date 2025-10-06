@@ -2,8 +2,7 @@
   lib,
   pkgs,
   ...
-}:
-{
+}: {
   config = {
     extraConfigLuaPre =
       # lua
@@ -102,8 +101,8 @@
             "black"
             "isort"
           ];
-          lua = [ "stylua" ];
-          nix = [ "nixfmt-rfc-style" ];
+          lua = ["stylua"];
+          nix = ["alejandra"];
           markdown = {
             __unkeyed-1 = "prettierd";
             __unkeyed-2 = "prettier";
@@ -114,15 +113,15 @@
             __unkeyed-2 = "prettier";
             stop_after_first = true;
           };
-          terraform = [ "terraform_fmt" ];
-          bicep = [ "bicep" ];
+          terraform = ["terraform_fmt"];
+          bicep = ["bicep"];
           bash = [
             "shellcheck"
             "shellharden"
             "shfmt"
           ];
-          json = [ "jq" ];
-          "_" = [ "trim_whitespace" ];
+          json = ["jq"];
+          "_" = ["trim_whitespace"];
         };
 
         formatters = {
