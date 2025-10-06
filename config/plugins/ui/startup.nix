@@ -64,12 +64,12 @@
           [
             "󰧑 Edit Cflake"
             "edit ~/Codes/Github/cflake"
-            "sb"
+            "ec"
           ]
           [
             "󰈆 Quit All"
             "qa"
-            "qq"
+            "qa"
           ]
         ];
         highlight = "string";
