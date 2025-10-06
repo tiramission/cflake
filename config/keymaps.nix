@@ -333,6 +333,14 @@
     }
     {
       mode = "n";
+      key = "<leader>qf";
+      action = "<cmd>q!<cr>";
+      options = {
+        desc = "Force Quit";
+      };
+    }
+    {
+      mode = "n";
       key = "<leader>ui";
       action = "vim.show_pos";
       options = {

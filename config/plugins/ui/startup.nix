@@ -62,9 +62,14 @@
             "ct"
           ]
           [
-            "󰧑 SecondBrain"
-            "edit ~/projects/personal/SecondBrain"
+            "󰧑 Edit Cflake"
+            "edit ~/Codes/Github/cflake"
             "sb"
+          ]
+          [
+            "󰈆 Quit All"
+            "qa"
+            "qq"
           ]
         ];
         highlight = "string";
