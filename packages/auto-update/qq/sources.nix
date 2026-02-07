@@ -12,17 +12,17 @@ in {
   aarch64-darwin = any-darwin;
   x86_64-darwin = any-darwin;
   aarch64-linux = {
-    version = "3.2.23-2026-01-08";
+    version = "3.2.25-2026-02-05";
     src = fetchurl {
-      url = "https://dldir1v6.qq.com/qqfile/qq/QQNT/Linux/QQ_3.2.23_260108_arm64_01.deb";
-      hash = "sha256-hw7TwOQX6bs6AhwdVlGLwvu6gtHD4YcThPZKt+IZI/c=";
+      url = "https://dldir1v6.qq.com/qqfile/qq/QQNT/Linux/QQ_3.2.25_260205_arm64_01.deb";
+      hash = "sha256-auuTHb7WSS3EOyaeMJ4iTwcoUUHy4tVccnNqoxQZEhk=";
     };
   };
   x86_64-linux = {
-    version = "3.2.23-2026-01-08";
+    version = "3.2.25-2026-02-05";
     src = fetchurl {
-      url = "https://dldir1v6.qq.com/qqfile/qq/QQNT/Linux/QQ_3.2.23_260108_amd64_01.deb";
-      hash = "sha256-pCUnGcG+uK3ODaCev8MQzlDHnqVI9czkKVBXZdC/uoQ=";
+      url = "https://dldir1v6.qq.com/qqfile/qq/QQNT/Linux/QQ_3.2.25_260205_amd64_01.deb";
+      hash = "sha256-TVEHWd8lyfhcfj6E83XDaFq2L75wtNNI97osG6iCvuA=";
     };
   };
 }
