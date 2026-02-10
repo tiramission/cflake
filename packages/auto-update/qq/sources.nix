@@ -2,10 +2,10 @@
 {fetchurl}:
 let
   any-darwin = {
-    version = "6.9.88-2026-01-16";
+    version = "6.9.89-2026-02-05";
     src = fetchurl {
-      url = "https://dldir1v6.qq.com/qqfile/qq/QQNT/Mac/QQ_6.9.88_260116_01.dmg";
-      hash = "sha256-mlQrvt3MZW11HN7K8zc/jqrDvMBYcfNR6MlI0OX1SYs=";
+      url = "https://dldir1v6.qq.com/qqfile/qq/QQNT/Mac/QQ_6.9.89_260205_01.dmg";
+      hash = "sha256-GXsZgj0hWNkR654G5GJ5eY0LqbrItjxn0pgdYke9Kak=";
     };
   };
 in {
