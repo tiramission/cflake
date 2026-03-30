@@ -18,8 +18,6 @@ in
     wechat = pkgs.callPackage ./manual/wechat/package.nix {};
 
     uv = pkgs.callPackage ./auto-update/uv {};
-    codex-rs = pkgs.callPackage ./auto-update/codex-rs {};
     scrcpy = pkgs.callPackage ./auto-update/scrcpy {};
-    qq = pkgs.callPackage ./auto-update/qq {};
     zashboard = pkgs.callPackage ./auto-update/zashboard {};
   })
