@@ -12,7 +12,6 @@ in
   forAllSystems (system: let
     pkgs = nixpkgsFor.${system};
   in {
-    zashboard = pkgs.callPackage ./manual/zashboard.nix {};
     sarasa-term-sc-nerd = pkgs.callPackage ./manual/sarasa-term-sc-nerd.nix {};
     smctemp = pkgs.callPackage ./manual/smctemp.nix {};
     microsoft-edge = pkgs.callPackage ./manual/microsoft-edge.nix {};
@@ -22,4 +21,5 @@ in
     codex-rs = pkgs.callPackage ./auto-update/codex-rs {};
     scrcpy = pkgs.callPackage ./auto-update/scrcpy {};
     qq = pkgs.callPackage ./auto-update/qq {};
+    zashboard = pkgs.callPackage ./auto-update/zashboard {};
   })
