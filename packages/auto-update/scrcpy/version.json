@@ -5,7 +5,7 @@
         "url": "https://gh-proxy.com/github.com/Genymobile/scrcpy/releases/download/v3.3.4/scrcpy-macos-aarch64-v3.3.4.tar.gz"
     },
     "linux-x86_64": {
-        "hash": "sha256-AwXZjAYXjGfhJCe780DENtDVjJ4qOb+f+7+PVNfvlaU=",
+        "hash": "",
         "url": "https://gh-proxy.com/github.com/Genymobile/scrcpy/releases/download/v3.3.4/scrcpy-linux-x86_64-v3.3.4.tar.gz"
     }
 }
