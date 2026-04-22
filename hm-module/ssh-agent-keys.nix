@@ -34,6 +34,12 @@
           config.mtools.ssh-agent-keys.keys}
       '';
     in {
+      assertions = [
+        {
+          assertion = config.mtools.ssh-agent-keys.enable -> config.services.ssh-agent.enable;
+          message = "mtools.ssh-agent-keys.enable requires services.ssh-agent.enable";
+        }
+      ];
       systemd.user.services.ssh-agent = lib.mkIf (!pkgs.stdenv.isDarwin) {
         Service.ExecStartPost = "${addGitKeys}/bin/ssh-add-git-keys";
       };
