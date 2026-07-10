@@ -1,11 +1,11 @@
 {
     "version": "v4.0",
     "macos-aarch64": {
-        "hash": "",
+        "hash": "sha256-9RZ/4Ef+SiriwuqGNMcUWk1k0LYAXyS7RWOalluMYNQ=",
         "url": "https://gh-proxy.com/github.com/Genymobile/scrcpy/releases/download/v4.0/scrcpy-macos-aarch64-v4.0.tar.gz"
     },
     "linux-x86_64": {
-        "hash": "",
+        "hash": "sha256-fa8Fr11XWGLmKwaM9oUtYGj69+8xePNzXjlT53j78Ks=",
         "url": "https://gh-proxy.com/github.com/Genymobile/scrcpy/releases/download/v4.0/scrcpy-linux-x86_64-v4.0.tar.gz"
     }
 }
