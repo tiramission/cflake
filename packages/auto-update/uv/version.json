@@ -1,15 +1,15 @@
 {
-    "version": "0.13.3",
+    "version": "0.13.4",
     "aarch64-apple-darwin": {
-        "hash": "sha256-vx5PtvX1B5opAq0/Op4tM3V1siahN48kSdhAQ1NlBgg=",
-        "url": "https://github.com/astral-sh/uv/releases/download/0.13.3/uv-aarch64-apple-darwin.tar.gz"
+        "hash": "sha256-4LHUdDzmTFXZ8PSkRK+muBElaABw7gToU/zQ9sHr+PE=",
+        "url": "https://github.com/astral-sh/uv/releases/download/0.13.4/uv-aarch64-apple-darwin.tar.gz"
     },
     "aarch64-unknown-linux-musl": {
-        "hash": "sha256-Slh4V2irBXdJfKeUC+L5/Vo05Iw/03kjaS/AqB1xrJ8=",
-        "url": "https://github.com/astral-sh/uv/releases/download/0.13.3/uv-aarch64-unknown-linux-musl.tar.gz"
+        "hash": "sha256-JToXyty2Wa53oP47mi8cFCl1KNSAxCGJnmHmTWTyTo8=",
+        "url": "https://github.com/astral-sh/uv/releases/download/0.13.4/uv-aarch64-unknown-linux-musl.tar.gz"
     },
     "x86_64-unknown-linux-musl": {
-        "hash": "sha256-o2/KTBUdGsE3B5hKiKTidC7ewPK8Gz4cGMHHUeRnn9M=",
-        "url": "https://github.com/astral-sh/uv/releases/download/0.13.3/uv-x86_64-unknown-linux-musl.tar.gz"
+        "hash": "sha256-KNQ4X5+dHRx2VNhbOFXg4mFbL2zBMTai7f+Fi73Bb/E=",
+        "url": "https://github.com/astral-sh/uv/releases/download/0.13.4/uv-x86_64-unknown-linux-musl.tar.gz"
     }
 }
